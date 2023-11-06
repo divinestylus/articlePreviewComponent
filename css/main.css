@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+}
+
+:root {
+    --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --desaturatedDarkBlue: hsl(214, 17%, 51%);
+    --grayishBlue: hsl(212, 23%, 69%);
+    --lightGrayishBlue: hsl(210, 46%, 95%);
+    --white: #ffffff;
+    --defaultFont: 'Manrope', 'sans-serif';
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    padding: 10rem 1.5rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--lightGrayishBlue);
+    font-family: var(--defaultFont);
+    font-size: 0.9rem;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.4rem;
+    color: var(--veryDarkGrayishBlue);
+}
+
+p{
+    line-height: 1.5;
+    color: var(--desaturatedDarkBlue);
+}
+
+.wrapper {
+    background-color: var(--white);
+    border-radius: 15px;
+    display: grid;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.display-img {
+    border-radius: 15px 15px 0 0;
+    height: 250px;
+    object-fit: cover;
+}
+
+.body-text {
+    padding: 2rem 2rem 0.5rem 2rem;
+}
+
+.credits-share-section {
+    position: relative;
+}
+
+.credits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 0 0 15px 15px;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+}   
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile p {
+    margin: 0;
+}
+
+.profile-img {
+    border-radius: 1000px;
+    width: 50px;
+    height: 50px;
+}
+
+.date {
+    color: var(--grayishBlue);
+}
+
+.credits-share-icon-bg {
+    position: relative;
+    background-color: var(--lightGrayishBlue);
+    width: 35px;
+    cursor: pointer;
+    height: 35px;
+    border-radius: 100px;
+}
+
+.credits-share-icon {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+.share {
+    display: none;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--veryDarkGrayishBlue);
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius:  0 0 15px 15px;
+} 
+
+.show-share {
+    display: flex;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.share p {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--grayishBlue);
+}
+
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.social-media-icons svg:hover {
+    cursor: pointer;
+}
+
+.share-share-icon-bg {
+    position: relative;
+    background-color: var(--desaturatedDarkBlue);
+    width: 35px;
+    cursor: pointer;
+    height: 35px;
+    border-radius: 100px;
+}
+
+.share-share-icon {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+.attribution { 
+    font-size: 11px; 
+    padding-block: 1rem;
+    text-align: center; 
+    color: var(--grayishBlue);
+}
+
+.attribution a { 
+    text-decoration: none;
+    color: var(--veryDarkGrayishBlue);
+    transition: 0.3s all;
+}
+
+.attribution a:hover {
+    color: var(--desaturatedDarkBlue);
+}
+
+
+/* Responsiveness section */
+@media(min-width: 700px){
+    body {
+        position: relative;
+    }
+
+    .wrapper{
+        max-width: 860px;
+        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .display-img {
+        height: 100%;
+        border-radius: 15px 0 0 15px;
+    }
+
+    .credits-share-section {
+        position: static;
+    }
+
+    .share {
+        border-radius: 15px;
+        width: fit-content;
+        height: fit-content;
+        inset: 0 0 0 25rem;
+        justify-content: center;
+    }
+
+    .share-share-icon-bg {
+        display: none;
+    }
+}
+
+@media(min-width: 800px){
+    .share {
+        inset: 0 0 2rem 35rem;
+    }
+}
+
+@media(min-width: 1070px){
+    .share {
+        inset: 0 0 4rem 48rem;
+    }
+}
